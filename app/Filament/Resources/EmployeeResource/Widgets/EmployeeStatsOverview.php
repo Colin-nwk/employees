@@ -15,7 +15,7 @@ class EmployeeStatsOverview extends BaseWidget
         return [
             Card::make('All Employees', Employee::all()->count())
                 ->color('success'),
-            Card::make($ng->name . 'Employees', $ng->employees_count),
+            Card::make('NG Employees', $ng ? $ng->employees_count : 0),
             Card::make('Average time on page', '3:12'),
         ];
     }
